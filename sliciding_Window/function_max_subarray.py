@@ -3,7 +3,7 @@ def find_max_sum_subarray (k):
     low=0
     high=k-1 
     n=len(my_lst)
-    res=0 
+    res=float('-inf') 
     sum=0 
     
     for i in range(low ,high+1):
