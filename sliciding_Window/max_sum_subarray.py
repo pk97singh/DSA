@@ -6,7 +6,7 @@ my_lst= [100,200,300,400]
 #since , its an fixed window , so low=0 high=1
 
 #find sum of first window .
-res=0
+res=float('-inf')
 low = 0
 high=1 #high =k-1
 sum=0 
