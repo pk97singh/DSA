@@ -53,6 +53,40 @@ if res==float('inf'):
          
 print(res)
 
+#quoesstion 3:Longest Substring with K Uniques
+class Solution:
+    def longestKSubstr(self, s, k):
+        # code here
+        h=0
+        l=0
+        freq={}
+        n=len(s)
+        res=float('-inf')
+        for i in range(h,n):
+            freq[s[h]]=freq.get(s[h],0)+1
+            h=h+1
+            
+            while len(freq)>k:
+               freq[s[l]]=freq[s[l]]-1
+               if freq[s[l]]==0:
+                   del freq[s[l]]
+               
+               l=l+1
+            if len(freq)==k:
+                length=h-l
+                res=max(length,res)
+            
+                
+                 
+            
+        if len(freq)<k:
+            return -1
+        return res
+                
+                
+                
+            
+        
          
 
     
