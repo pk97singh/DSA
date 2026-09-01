@@ -82,6 +82,31 @@ class Solution:
         if len(freq)<k:
             return -1
         return res
+
+#quoestion 4: fruit basket
+
+class Solution:
+    def totalFruit(self, fruits: List[int]) -> int:
+        l=0
+        h=0
+        freq={}
+        res=float('-inf')
+
+        n=len(fruits)
+        for i in range(0,n):
+            freq[fruits[i]]=freq.get(fruits[i],0)+1
+
+            while (len(freq)>2):
+                freq[fruits[l]]-=1
+                if freq[fruits[l]]==0:
+                    del freq[fruits[l]]
+                l=l+1
+            h=h+1
+            
+            length=h-l
+            res=max(res,length)
+        return res
+        
                 
                 
                 
