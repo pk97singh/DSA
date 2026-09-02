@@ -13,3 +13,11 @@ def reverse_string(s):
     return res 
 
 print(reverse_string("hello"))
+
+# stack.append(x)   # push
+
+# stack[-1]         # top / peek
+
+# stack.pop()       # pop
+
+# while stack:      # stack is not empty
