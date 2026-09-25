@@ -47,3 +47,23 @@ def decode(s1):
 
 
 print(decode("3[a2[b]]"))
+
+#circular array 
+def cicular_arr(arr1):
+    n=len(arr1)
+    stack=[]
+    res=[-1]*n
+    for i in range(n*2-1,-1,-1):
+        while stack and stack[-1]<=arr1[i%n]:
+            stack.pop()
+            
+        if i<n:
+            if stack:
+                res[i]=stack[-1]
+                
+        stack.append(arr1[i%n]) 
+        
+    return res
+
+print(cicular_arr([1, 2, 3, 4, 3]))
+
