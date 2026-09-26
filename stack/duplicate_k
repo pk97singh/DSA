@@ -1,0 +1,30 @@
+k=3
+ip="aaabdbbb"
+op="bd"
+
+def duplicates_k(s1):
+    stack=[]
+    current=""
+    num=0
+    res=""
+    for ch in s1:
+        current=ch
+        num=0
+        
+        if stack and stack[-1][0]==ch:
+          prev,count=stack.pop()
+          count=count+1
+          if count<k:
+               stack.append((ch,count))
+        
+        else :
+            stack.append((current,1))
+        
+    for ch,count in stack:
+        res+=ch*count
+    
+    
+    return res
+        
+print(duplicates_k(ip))
+        
