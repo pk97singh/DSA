@@ -1,6 +1,6 @@
 arr = [1, 3, 5, 7, 9, 11, 13]
 tar=11 
-# requirement : greater or equal to tar
+#finding the index of the first element strictly greater than the target (arr[i] > tar).
 
 def greater_or_equal(tar,arr):
     l=0
